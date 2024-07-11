@@ -26,7 +26,6 @@ import io.spring.start.site.container.SimpleDockerServiceResolver;
 import io.spring.start.site.project.ProjectDescriptionCustomizerConfiguration;
 import io.spring.start.site.support.CacheableMavenVersionResolver;
 import io.spring.start.site.support.StartInitializrMetadataUpdateStrategy;
-import io.spring.start.site.web.HomeController;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -56,10 +55,6 @@ public class StartApplication {
 		SpringApplication.run(StartApplication.class, args);
 	}
 
-	@Bean
-	public HomeController homeController() {
-		return new HomeController();
-	}
 
 	@Bean
 	public StartInitializrMetadataUpdateStrategy initializrMetadataUpdateStrategy(
