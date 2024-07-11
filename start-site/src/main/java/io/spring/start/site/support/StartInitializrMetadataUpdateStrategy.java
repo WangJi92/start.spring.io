@@ -16,16 +16,15 @@
 
 package io.spring.start.site.support;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.spring.initializr.generator.version.Version;
 import io.spring.initializr.metadata.DefaultMetadataElement;
 import io.spring.initializr.web.support.InitializrMetadataUpdateStrategy;
 import io.spring.initializr.web.support.SpringIoInitializrMetadataUpdateStrategy;
-
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * An {@link InitializrMetadataUpdateStrategy} that performs additional filtering of
@@ -36,6 +35,7 @@ import org.springframework.web.client.RestTemplate;
  */
 public class StartInitializrMetadataUpdateStrategy extends SpringIoInitializrMetadataUpdateStrategy {
 
+	// todo 最低版本处理..
 	private static final Version MINIMUM_BOOT_VERSION = Version.parse("3.2.0");
 
 	public StartInitializrMetadataUpdateStrategy(RestTemplate restTemplate, ObjectMapper objectMapper) {
